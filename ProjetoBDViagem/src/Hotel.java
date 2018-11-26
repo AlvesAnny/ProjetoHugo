@@ -6,18 +6,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 
-		@Entity
-		public class Hotel {
-
-		@Id
-		private Long id;
-		private String nome;
-
-		@OneToMany(mappedBy="hotel")
-		private Set<> clientes;
+@Entity
 
 
 public class Hotel {
+	@Id
 	private int id;
 	private String nome;
 	private int wifi;

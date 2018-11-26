@@ -4,17 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-	@Entity
-	public class Agencia {
-
-	@Id
-	private Long id;
-	private String nome;
-	
-	@OneToMany(mappedBy="agencia")
-	private Set<Cliente> clientes;
+@Entity
 
 public class Agencia {
+	@Id
 	private int id;
 	private String nome;
 	private String viagem;

@@ -1,9 +1,11 @@
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
-@Id
+
 
 public class Quartos {
+	@Id
 	private int id;
 	private String standard;
 	private String suíte_exclusiva;

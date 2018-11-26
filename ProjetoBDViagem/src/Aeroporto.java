@@ -3,18 +3,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-		@Entity
-		public class Aeroporto {
+@Entity
 
-		@Id
-		private Long id;
-		private String nome;
-
-		@OneToMany(mappedBy="aeroporto")
-		private Set<Agencia> agencias;
 
 public class Aeroporto {
-
+	@Id
 	private int id;
 	private String nome;
 	private String localização;

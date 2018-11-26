@@ -1,9 +1,11 @@
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
-@Id
+
 
 public class Refeicoes {
+	@Id
 	private int id;
 	private String pensao_completa;
     private String meia_pensao;

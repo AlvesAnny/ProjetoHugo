@@ -6,16 +6,17 @@ import javax.persistence.Id;
 
 public class Quartos implements Identificavel {
 	@Id
-	private int id;
+	private Long id;
 	private String standard;
 	private String suíte_exclusiva;
 	private String suíte_master;
 	private String suíte_confort;
 	private String superior_com_hidro;
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getStandard() {
@@ -49,36 +50,22 @@ public class Quartos implements Identificavel {
 		this.superior_com_hidro = superior_com_hidro;
 	}
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Quartos other = (Quartos) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
-	public Quartos(int id) {
-		super();
-		this.id = id;
-	}
-	@Override
 	public String toString() {
 		return "Quartos [id=" + id + ", standard=" + standard + ", suíte_exclusiva=" + suíte_exclusiva
 				+ ", suíte_master=" + suíte_master + ", suíte_confort=" + suíte_confort + ", superior_com_hidro="
 				+ superior_com_hidro + "]";
 	}
-
+	public Quartos(Long id, String standard, String suíte_exclusiva, String suíte_master, String suíte_confort,
+			String superior_com_hidro) {
+		super();
+		this.id = id;
+		this.standard = standard;
+		this.suíte_exclusiva = suíte_exclusiva;
+		this.suíte_master = suíte_master;
+		this.suíte_confort = suíte_confort;
+		this.superior_com_hidro = superior_com_hidro;
+	}
+	
 	
 }
 

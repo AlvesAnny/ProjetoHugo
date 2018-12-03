@@ -6,7 +6,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 public class Hotel_refeicoes implements Identificavel {
-	private int id;
+	private Long id;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_refeicoes")
@@ -20,25 +20,31 @@ public class Hotel_refeicoes implements Identificavel {
 	
 	private Set<Refeicoes> refeicoes;
 
-
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
+	public Refeicoes getRefeicao() {
+		return Refeicao;
+	}
+
+	public void setRefeicao(Refeicoes refeicao) {
+		Refeicao = refeicao;
+	}
 
 	public Set<Refeicoes> getRefeicoes() {
 		return refeicoes;
 	}
 
-
 	public void setRefeicoes(Set<Refeicoes> refeicoes) {
 		this.refeicoes = refeicoes;
 	}
+
+
 	
 	
 	

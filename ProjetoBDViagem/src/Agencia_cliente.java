@@ -6,7 +6,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 public class Agencia_cliente implements Identificavel{
-	private int id;
+	private Long id;
 	private Agencia agencia;
 	private Cliente Cliente;
 	
@@ -22,11 +22,17 @@ public class Agencia_cliente implements Identificavel{
 	
 	private Set<Cliente> clientes;
 
-	public int getId() {
+	@Override
+	public String toString() {
+		return "Agencia_cliente [id=" + id + ", agencia=" + agencia + ", Cliente=" + Cliente + ", cliente=" + cliente
+				+ ", clientes=" + clientes + "]";
+	}
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -45,7 +51,32 @@ public class Agencia_cliente implements Identificavel{
 	public void setCliente(Cliente cliente) {
 		Cliente = cliente;
 	}
-	
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Set<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public void setClientes(Set<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+	public Agencia_cliente(Long id, Agencia agencia, Cliente cliente, Cliente cliente2, Set<Cliente> clientes) {
+		super();
+		this.id = id;
+		this.agencia = agencia;
+		Cliente = cliente;
+		cliente = cliente2;
+		this.clientes = clientes;
+	}
+
 	
 	
 	}

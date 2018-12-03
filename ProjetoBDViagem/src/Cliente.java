@@ -1,23 +1,22 @@
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 
 @Entity
 
 
 public class Cliente implements Identificavel {
 	@Id
-	private int id;
+	private Long id;
 	private int cpf;
 	private String nome;
 	private String nacionalidade;
 	private int data_nascimento;
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public int getCpf() {
@@ -45,37 +44,17 @@ public class Cliente implements Identificavel {
 		this.data_nascimento = data_nascimento;
 	}
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + cpf;
-		result = prime * result + id;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cliente other = (Cliente) obj;
-		if (cpf != other.cpf)
-			return false;
-		if (id != other.id)
-			return false;
-		return true;
-	}
-	public Cliente(int id, int cpf) {
-		super();
-		this.id = id;
-		this.cpf = cpf;
-	}
-	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", cpf=" + cpf + ", nome=" + nome + ", nacionalidade=" + nacionalidade
 				+ ", data_nascimento=" + data_nascimento + "]";
+	}
+	public Cliente(Long id, int cpf, String nome, String nacionalidade, int data_nascimento) {
+		super();
+		this.id = id;
+		this.cpf = cpf;
+		this.nome = nome;
+		this.nacionalidade = nacionalidade;
+		this.data_nascimento = data_nascimento;
 	}
 	
 	

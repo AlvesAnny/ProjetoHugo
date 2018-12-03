@@ -8,14 +8,15 @@ import javax.persistence.OneToMany;
 
 public class Agencia implements Identificavel {
 	@Id
-	private int id;
+	private Long id;
 	private String nome;
 	private String viagem;
 	
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -31,35 +32,16 @@ public class Agencia implements Identificavel {
 		this.viagem = viagem;
 	}
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Agencia other = (Agencia) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
-	public Agencia(int id) {
-		super();
-		this.id = id;
-	}
-	@Override
 	public String toString() {
 		return "Agencia [id=" + id + ", nome=" + nome + ", viagem=" + viagem + "]";
 	}
+	public Agencia(Long id, String nome, String viagem) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.viagem = viagem;
+	}
 	
 	
-
 }
 

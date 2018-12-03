@@ -1,15 +1,16 @@
 
 public class Post implements Identificavel {
-	private int id;
+	private Long id;
 	private int largura;
     private int tamanho;
     private String arquivo;
     private String comentario;
     private String Usuario;
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public int getLargura() {
@@ -43,55 +44,11 @@ public class Post implements Identificavel {
 		Usuario = usuario;
 	}
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((Usuario == null) ? 0 : Usuario.hashCode());
-		result = prime * result + ((arquivo == null) ? 0 : arquivo.hashCode());
-		result = prime * result + ((comentario == null) ? 0 : comentario.hashCode());
-		result = prime * result + id;
-		result = prime * result + largura;
-		result = prime * result + tamanho;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Post other = (Post) obj;
-		if (Usuario == null) {
-			if (other.Usuario != null)
-				return false;
-		} else if (!Usuario.equals(other.Usuario))
-			return false;
-		if (arquivo == null) {
-			if (other.arquivo != null)
-				return false;
-		} else if (!arquivo.equals(other.arquivo))
-			return false;
-		if (comentario == null) {
-			if (other.comentario != null)
-				return false;
-		} else if (!comentario.equals(other.comentario))
-			return false;
-		if (id != other.id)
-			return false;
-		if (largura != other.largura)
-			return false;
-		if (tamanho != other.tamanho)
-			return false;
-		return true;
-	}
-	@Override
 	public String toString() {
 		return "Post [id=" + id + ", largura=" + largura + ", tamanho=" + tamanho + ", arquivo=" + arquivo
 				+ ", comentario=" + comentario + ", Usuario=" + Usuario + "]";
 	}
-	public Post(int id, int largura, int tamanho, String arquivo, String comentario, String usuario) {
+	public Post(Long id, int largura, int tamanho, String arquivo, String comentario, String usuario) {
 		super();
 		this.id = id;
 		this.largura = largura;
@@ -100,6 +57,6 @@ public class Post implements Identificavel {
 		this.comentario = comentario;
 		Usuario = usuario;
 	}
-    
+	
     
 }

@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 
 public class Hotel_quartos implements Identificavel {
 
-	private int id;
+	private Long id;
 	private Quartos quartos;
 	
 	@ManyToOne
@@ -22,12 +22,20 @@ public class Hotel_quartos implements Identificavel {
 	
 	private Set<Quartos> quartoss;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Quartos getQuartos() {
+		return quartos;
+	}
+
+	public void setQuartos(Quartos quartos) {
+		this.quartos = quartos;
 	}
 
 	public Quartos getQuarto() {
@@ -37,6 +45,16 @@ public class Hotel_quartos implements Identificavel {
 	public void setQuarto(Quartos quarto) {
 		this.quarto = quarto;
 	}
+
+	public Set<Quartos> getQuartoss() {
+		return quartoss;
+	}
+
+	public void setQuartoss(Set<Quartos> quartoss) {
+		this.quartoss = quartoss;
+	}
+
+	
 	
 	
 	

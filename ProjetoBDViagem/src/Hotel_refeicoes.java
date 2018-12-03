@@ -5,7 +5,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-public class Hotel_refeicoes {
+public class Hotel_refeicoes implements Identificavel {
 	private int id;
 	
 	@ManyToOne

@@ -1,5 +1,5 @@
 
-public class Foto {
+public class Foto implements Identificavel{
 	private int id;
 	private int largura;
     private int tamanho;

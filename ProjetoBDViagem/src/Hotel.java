@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 @Entity
 
 
-public class Hotel {
+public class Hotel implements Identificavel {
 	@Id
 	private int id;
 	private String nome;

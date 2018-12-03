@@ -7,7 +7,7 @@ import javax.persistence.OneToMany;
 @Entity
 
 
-public class Cliente {
+public class Cliente implements Identificavel {
 	@Id
 	private int id;
 	private int cpf;

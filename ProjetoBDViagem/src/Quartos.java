@@ -4,7 +4,7 @@ import javax.persistence.Id;
 @Entity
 
 
-public class Quartos {
+public class Quartos implements Identificavel {
 	@Id
 	private int id;
 	private String standard;

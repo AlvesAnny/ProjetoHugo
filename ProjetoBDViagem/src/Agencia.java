@@ -6,7 +6,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 
-public class Agencia {
+public class Agencia implements Identificavel {
 	@Id
 	private int id;
 	private String nome;

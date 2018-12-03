@@ -1,5 +1,5 @@
 
-public class Post {
+public class Post implements Identificavel {
 	private int id;
 	private int largura;
     private int tamanho;

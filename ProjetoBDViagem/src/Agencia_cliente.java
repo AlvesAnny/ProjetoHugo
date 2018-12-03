@@ -5,7 +5,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-public class Agencia_cliente {
+public class Agencia_cliente implements Identificavel{
 	private int id;
 	private Agencia agencia;
 	private Cliente Cliente;

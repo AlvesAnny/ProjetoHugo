@@ -6,7 +6,7 @@ import javax.persistence.OneToMany;
 @Entity
 
 
-public class Aeroporto {
+public class Aeroporto implements Identificavel{
 	@Id
 	private int id;
 	private String nome;

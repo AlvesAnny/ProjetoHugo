@@ -2,7 +2,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class Viagem {
+public class Viagem implements Identificavel{
 	
 	public class DAO<E extends Identificavel> {
 

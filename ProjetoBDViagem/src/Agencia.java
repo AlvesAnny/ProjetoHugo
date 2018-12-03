@@ -1,8 +1,6 @@
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 
 @Entity
 
@@ -40,6 +38,9 @@ public class Agencia implements Identificavel {
 		this.id = id;
 		this.nome = nome;
 		this.viagem = viagem;
+	}
+	public Agencia() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -11,7 +11,6 @@ public class Aeroporto implements Identificavel{
 	private Long id;
 	private String nome;
 	private String localização;
-	
 	public Long getId() {
 		return id;
 	}
@@ -32,9 +31,7 @@ public class Aeroporto implements Identificavel{
 	}
 	@Override
 	public String toString() {
-		return "Aeroporto [id=" + id + ", nome=" + nome + ", localização=" + localização + ", getId()=" + getId()
-				+ ", getNome()=" + getNome() + ", getLocalização()=" + getLocalização() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Aeroporto [id=" + id + ", nome=" + nome + ", localização=" + localização + "]";
 	}
 	public Aeroporto(Long id, String nome, String localização) {
 		super();
@@ -42,6 +39,8 @@ public class Aeroporto implements Identificavel{
 		this.nome = nome;
 		this.localização = localização;
 	}
+	
+	
 	
 	
 	

@@ -3,10 +3,14 @@ import java.util.Set;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 public class Hotel_refeicoes {
 	private int id;
 	
+	@ManyToOne
+	@JoinColumn(name = "id_refeicoes")
+	private Refeicoes Refeicao;
 	
 	@ManyToMany
 	@JoinTable(

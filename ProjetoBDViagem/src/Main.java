@@ -1,6 +1,7 @@
  public class Main {
 	
 		public static void main(String[] args) {
+			
 			DAO<Agencia> dao = new DAO<Agencia>();
 			Agencia p = new Agencia();
 			p.setId(22l);
@@ -12,8 +13,7 @@
 			dao.save(p2);
 			Agencia find = dao.find(Agencia.class, 22l);
 			System.out.println(find.getNome());
-		}
-		
-		
 	}
+		
+}
 

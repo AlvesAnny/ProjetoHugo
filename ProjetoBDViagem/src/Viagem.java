@@ -6,7 +6,7 @@ public class Viagem {
 	
 	public class DAO<E extends Identificavel> {
 
-		private EntityManagerFactory factory = Persistence.createEntityManagerFactory("academico");
+		private EntityManagerFactory factory = Persistence.createEntityManagerFactory("Cliente");
 		
 		public void save(E e) {
 			EntityManager em = factory.createEntityManager();

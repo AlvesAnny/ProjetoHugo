@@ -44,13 +44,6 @@ public class Agencia_cliente implements Identificavel{
 		this.agencia = agencia;
 	}
 
-	public Cliente getCliente() {
-		return Cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		Cliente = cliente;
-	}
 
 	public Cliente getCliente() {
 		return cliente;
